@@ -1,0 +1,8 @@
+version: '3'
+services:
+  consumer:
+    build: .
+    volumes:
+      - "./media:/media"
+    environment:
+      MESSENGER_TRANSPORT_DSN: amqp://guest:guest@amqp:5672/%2f/generate_thumbnail

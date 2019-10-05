@@ -1,6 +1,15 @@
 {
+    "doctrine/inflector": {
+        "version": "v1.3.0"
+    },
+    "mikey179/vfsstream": {
+        "version": "v1.6.7"
+    },
     "monolog/monolog": {
         "version": "1.25.1"
+    },
+    "nikic/php-parser": {
+        "version": "v4.2.4"
     },
     "pbxg33k/message-pack": {
         "version": "v0.2"
@@ -94,6 +103,15 @@
     "symfony/http-kernel": {
         "version": "v4.3.4"
     },
+    "symfony/maker-bundle": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
+        }
+    },
     "symfony/messenger": {
         "version": "4.3",
         "recipe": {
@@ -126,6 +144,22 @@
             "config/packages/test/monolog.yaml"
         ]
     },
+    "symfony/phpunit-bridge": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "b0582341f1df39aaf3a9a866cdbe49937da35984"
+        },
+        "files": [
+            ".env.test",
+            "bin/phpunit",
+            "config/bootstrap.php",
+            "phpunit.xml.dist",
+            "tests/.gitignore"
+        ]
+    },
     "symfony/polyfill-intl-idn": {
         "version": "v1.12.0"
     },
@@ -137,6 +171,9 @@
     },
     "symfony/polyfill-php73": {
         "version": "v1.12.0"
+    },
+    "symfony/process": {
+        "version": "v4.3.4"
     },
     "symfony/routing": {
         "version": "4.2",

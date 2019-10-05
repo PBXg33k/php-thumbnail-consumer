@@ -15,6 +15,13 @@ RUN apk add --no-cache --update --virtual build-dependencies alpine-sdk automake
     && cd ../ && rm -rf /tmp/php-amqp && apk del build-dependencies \
     && docker-php-ext-enable amqp
 
+# install MT (media thumbnails)
+RUN wget https://github.com/mutschler/mt/releases/download/1.0.8/mt-1.0.8-linux_amd64.tar.bz2 \
+    && tar xvjf mt-1.0.8-linux_amd64.tar.bz2 \
+    && mv mt-1.0.8-linux_amd64 /usr/local/bin/mt \
+    && chmod +x /usr/local/bin/mt \
+    && rm -f mt-1.0.8-linux_amd64.tar.bz2
+
 FROM build AS final
 WORKDIR /var/www
 

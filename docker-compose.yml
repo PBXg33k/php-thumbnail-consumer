@@ -1,6 +1,9 @@
-version: '2'
+version: '3'
 services:
   consumer:
     build: .
     volumes:
       - "./:/var/www"
+    environment:
+      MT_CONF_FILE: /var/www/app/config/mt.json
+      THUMB_DIR: /media/thumbs
