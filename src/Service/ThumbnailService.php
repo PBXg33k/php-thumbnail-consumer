@@ -265,8 +265,16 @@ class ThumbnailService
      */
     public function setThumbnailDirectory(string $thumbnailDirectory): ThumbnailService
     {
+
+
         if(!is_dir($thumbnailDirectory)) {
-            throw new \Exception('Not a valid directory');
+            if(is_dir(dirname($thumbnailDirectory))) {
+                if (!mkdir($thumbnailDirectory) && !is_dir($thumbnailDirectory)) {
+                    throw new \RuntimeException(sprintf('Directory "%s" was not created', $thumbnailDirectory));
+                }
+            } else {
+                throw new \Exception('Not a valid directory');
+            }
         }
 
         $this->thumbnailDirectory = $thumbnailDirectory;

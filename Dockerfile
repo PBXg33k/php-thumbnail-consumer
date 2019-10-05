@@ -2,6 +2,8 @@ FROM php:7.3-fpm-alpine AS build
 MAINTAINER Oguzhan Uysal <development@oguzhanuysal.eu>
 
 ENV XDEBUGVERSION="2.7.0RC2"
+ENV MT_CONF_FILE="/var/www/app/config/mt.json"
+ENV THUMB_DIR="/media/thumbs"
 
 # install PHP extensions & composer
 RUN apk add --no-cache --update --virtual build-dependencies alpine-sdk automake autoconf \
