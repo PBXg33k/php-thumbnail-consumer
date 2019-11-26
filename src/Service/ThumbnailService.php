@@ -4,6 +4,7 @@ namespace App\Service;
 
 use mysql_xdevapi\Exception;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Exception\ProcessTimedOutException;
 use Symfony\Component\Process\Process;
@@ -39,7 +40,7 @@ class ThumbnailService
     )
     {
         $this->logger = $logger;
-        $this->mtConfigPath = $mtConfigPath;
+        $this->setMtConfigPath($mtConfigPath);
         $this->setThumbnailDirectory($thumbnailDirectory);
     }
 
@@ -246,6 +247,10 @@ class ThumbnailService
      */
     public function setMtConfigPath(string $mtConfigPath): ThumbnailService
     {
+        if(!is_file($mtConfigPath)) {
+            throw new FileNotFoundException('config file not found');
+        }
+
         $this->mtConfigPath = $mtConfigPath;
         return $this;
     }
