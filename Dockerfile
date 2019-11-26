@@ -12,6 +12,8 @@ RUN wget https://github.com/mutschler/mt/releases/download/1.0.8/mt-1.0.8-linux_
     && chmod +x /usr/local/bin/mt \
     && rm -f mt-1.0.8-linux_amd64.tar.bz2
 
+RUN docker-php-ext-install pcntl
+
 FROM base AS final
 WORKDIR /var/www
 
