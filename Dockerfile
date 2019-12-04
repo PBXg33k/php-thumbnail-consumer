@@ -2,7 +2,7 @@ FROM pbxg33k/php-consumer-base AS base
 MAINTAINER Oguzhan Uysal <development@oguzhanuysal.eu>
 
 ENV XDEBUGVERSION="2.7.0RC2"
-ENV MT_CONF_FILE="/var/www/app/config/mt.json"
+ENV MT_CONF_FILE="/var/www/config/mt.json"
 ENV THUMB_DIR="/media/thumbs"
 
 # install MT (media thumbnails)
