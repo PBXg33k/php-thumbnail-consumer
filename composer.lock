@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "706adc279ad8e00ad0799ee7488f055d",
+    "content-hash": "0c9a02911f417fb3aa8dba349fd5f557",
     "packages": [
         {
             "name": "monolog/monolog",
@@ -86,16 +86,16 @@
         },
         {
             "name": "pbxg33k/message-pack",
-            "version": "v0.3",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PBXg33k/message-pack.git",
-                "reference": "21c0f06914ddfe7b146f26c9b6ef5cd89718ff13"
+                "reference": "a417cbb0de3a2090dd2db56aa50fabb3a08bd4ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PBXg33k/message-pack/zipball/21c0f06914ddfe7b146f26c9b6ef5cd89718ff13",
-                "reference": "21c0f06914ddfe7b146f26c9b6ef5cd89718ff13",
+                "url": "https://api.github.com/repos/PBXg33k/message-pack/zipball/a417cbb0de3a2090dd2db56aa50fabb3a08bd4ad",
+                "reference": "a417cbb0de3a2090dd2db56aa50fabb3a08bd4ad",
                 "shasum": ""
             },
             "require": {
@@ -122,7 +122,7 @@
                 }
             ],
             "description": "Collection of Messages for microservices",
-            "time": "2019-12-05T21:21:45+00:00"
+            "time": "2019-12-07T19:52:02+00:00"
         },
         {
             "name": "psr/cache",
@@ -2374,7 +2374,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "pbxg33k/message-pack": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
